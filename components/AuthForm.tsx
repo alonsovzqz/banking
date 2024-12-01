@@ -40,8 +40,11 @@ const AuthForm = ({ type }: { type: string }) => {
       }
 
       if (type === "sign-in") {
-        const response = await signIn({ email: values.email, password: values.password });
-        if (response) router.push('/');
+        const response = await signIn({
+          email: values.email,
+          password: values.password,
+        });
+        if (response) router.push("/");
       }
     } catch (error) {
       console.error(error);
